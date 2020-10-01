@@ -122,6 +122,19 @@ HINT: Module Operator
 
 /* WRITE YOUR CODE HERE */
 
+
+const check3and7 = function (num) {
+    if (num % 7 === 0 || num % 3 === 0) {
+        console.log("it's a multiple of 3 or 7")
+    } else {
+        console.log("it's not a multiple of 3 or 7")
+    }
+}
+
+
+
+/*
+console.log(check3and7(22))
 const check3and7 = (x) => {
     if (x % 3 === 0) {
       return "it's a multiple of 3";
@@ -135,7 +148,7 @@ const check3and7 = (x) => {
   console.log(check3and7(9));
   console.log(check3and7(10));
 
-
+*/
 
 
 /* EXERCISE 7
