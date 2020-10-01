@@ -187,7 +187,7 @@ Write a function "giveMeRandom" which accepts a number n and returns an array co
 */
 
 /* WRITE YOUR CODE HERE */
-
+/*
 function giveMeRandom(min, max) {
     return Math.random() * (max - min) + min;
 }
@@ -198,7 +198,16 @@ function giveMeRandom(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-    console.log(giveMeRandom(0, 10));
+    console.log(giveMeRandom0(0, 10));
+*/
+    const giveMeRandom0 = (n) => {
+        let arrayN = [];
+        for (i = 0; i <= n; i++) {
+          arrayN.push(Math.floor(Math.random() * 10 + 0));
+        }
+        return arrayN;
+      };
+      console.log(giveMeRandom0(6));
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit with your tutor.
 */
