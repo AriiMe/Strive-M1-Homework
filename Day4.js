@@ -122,6 +122,18 @@ HINT: Module Operator
 
 /* WRITE YOUR CODE HERE */
 
+const check3and7 = (x) => {
+    if (x % 3 === 0) {
+      return "it's a multiple of 3";
+    } else if (x % 7 === 0) {
+      return "it's a multiple of 7";
+    } else {
+      return "it's neither a multiple of 3 or 7";
+    }
+  };
+  console.log(check3and7(14));
+  console.log(check3and7(9));
+  console.log(check3and7(10));
 
 
 
@@ -132,11 +144,32 @@ Write a function "reverseString" to reverse programmatically a given string (es.
 
 /* WRITE YOUR CODE HERE */
 
+const reverseString = (s) => {
+    return s.split("").reverse().join("").toLowerCase();
+  };
+  console.log(reverseString("YEEET"));
+
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as parameter
 */
 
 /* WRITE YOUR CODE HERE */
+
+const upperFirst = (str) => {
+
+    //I create an array with all string words
+    let splitStr = str.toLowerCase().split(" ");
+    //for each word in the array, I capitalized the first letter
+    for (i = 0; i < splitStr.length; i++) {
+      splitStr[i] =
+        splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+    }
+    //i re-join the array to create a string
+    return splitStr.join(" ");
+  };
+  
+  console.log(upperFirst("i don't know if this works"));
+  console.log(upperFirst("seems it does"));
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
@@ -144,12 +177,28 @@ Write a function "cutString" to create a new string without the first and last c
 
 /* WRITE YOUR CODE HERE */
 
+const cutString = (s) => {
+    return s.slice(1, -1); //-1 is lengh-1
+  };
+  console.log(cutString("lets see if this one is correct"));
+
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10
 */
 
 /* WRITE YOUR CODE HERE */
 
+function giveMeRandom(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+
+function giveMeRandom(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+    console.log(giveMeRandom(0, 10));
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit with your tutor.
 */
