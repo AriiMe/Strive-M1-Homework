@@ -28,8 +28,6 @@ const rectangle = function (l1, l2) {
 /* EXERCISE 2
 Write a function "crazySum" which receives two given integers. If the two values are same, then returns triple their sum.
 */
-let x1 = 6;
-let y1 = 6;
 
 function crazySum (x1, y1) {
     if (x1 === y1) {
@@ -40,8 +38,8 @@ function crazySum (x1, y1) {
       return "not equal";
      }
    }
-  //console.log(crazySum(5, 8));
-  console.log(crazySum(x1, y1));
+  console.log("crazySum2:", crazySum(5, 8));
+  console.log("crazySum:", crazySum(5, 5));
 
 
 
